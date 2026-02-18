@@ -49,7 +49,7 @@
                                 Profile</a>
                             @endrole --}}
                         </li>
-                        <li><a href="{{ url('logout') }}"><i class="mdi mdi-logout m-r-5"></i> Logout</a></li>
+                        <li><a href="{{ url('logout') }}" id="btn-logout"><i class="mdi mdi-logout m-r-5"></i> Logout</a></li>
                     </ul>
                 </li>
 

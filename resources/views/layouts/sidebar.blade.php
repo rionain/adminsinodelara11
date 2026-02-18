@@ -356,7 +356,7 @@
                 @endrole
 
                 <li class="has_sub">
-                    <a href="{{ url('logout') }}" class="waves-effect"><i class="mdi mdi-logout"></i>
+                    <a href="{{ url('logout') }}" id="btn-logout" class="waves-effect"><i class="mdi mdi-logout"></i>
                         <span>
                             Logout
                         </span>

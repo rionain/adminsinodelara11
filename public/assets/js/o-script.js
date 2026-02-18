@@ -12,7 +12,7 @@ $(document).on('click', '#btn-logout', function (e) {
     },
         function (isConfirm) {
             if (isConfirm) {
-                window.location.href = base_url('admin/logout');
+                window.location.href = base_url('logout');
             }
         });
 });
@@ -46,7 +46,7 @@ function badge(color, text) {
 function hiddenModal(modal, id) {
     $('#' + modal + ' #' + id).val('')
     $('#' + modal + ' #' + id).removeClass('is-invalid')
-    $('#' + modal + ' #' + id +'-error').hide()
+    $('#' + modal + ' #' + id + '-error').hide()
 
 }
 
@@ -262,12 +262,12 @@ function setValSelect2(modal, id, value) {
 
 function removeSpace(val) {
     if (val) {
-      const data = val.toString().split('.')
-      let dt = ''
-      data.map((value, index) => {
-        dt = dt + value
-      })
-      return dt
+        const data = val.toString().split('.')
+        let dt = ''
+        data.map((value, index) => {
+            dt = dt + value
+        })
+        return dt
     }
     return val
-  }
+}
