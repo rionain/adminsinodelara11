@@ -4,17 +4,17 @@
 
         <!--- Sidemenu -->
         <div id="sidebar-menu">
-            <div class="user-details">
+            <div class="user-details" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 0;">
                 <div class="overlay"></div>
-                <div class="text-center">
+                <div class="text-center" style="position: relative; z-index: 1;">
                     <img src="{{ Auth::check() && Auth::user()->profile_pic ? S3Helper::get(Auth::user()->profile_pic) : asset('assets/images/users/avatar-1.jpg') }}"
                         alt="" class="thumb-md img-circle">
                 </div>
-                <div class="user-info">
+                <div class="user-info" style="margin-top: 15px; text-align: center; position: relative; z-index: 1;">
                     <div>
-                        <a href="{{ url('profile') }}" class="text-center">
+                        <a href="{{ url('profile') }}" style="color: #ffffff; font-weight: 600; text-decoration: none;">
                             {{ Auth::check() ? Auth::user()->nama : 'Belum login' }} <br>
-                            <span class="badge badge-secondary">{{ Auth::user()->nama_role }}</span>
+                            <span class="badge badge-secondary" style="margin-top: 5px;">{{ Auth::user()->nama_role }}</span>
                         </a>
                     </div>
                 </div>
