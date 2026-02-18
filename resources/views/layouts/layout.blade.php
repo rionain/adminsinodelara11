@@ -55,7 +55,9 @@
     <script src="{{ asset('assets/js/jquery-migrate.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/detect.js') }}"></script>
-    <script src="{{ asset('assets/js/fastclick.js') }}"></script>
+    <script src="{{ asset('assets/js/detect.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/fastclick.js') }}"></script> --}}
+    <script src="{{ asset('assets/js/jquery.blockUI.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.blockUI.js') }}"></script>
     <script src="{{ asset('assets/js/waves.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
