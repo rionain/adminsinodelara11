@@ -4,18 +4,18 @@
 
         <!--- Sidemenu -->
         <div id="sidebar-menu">
-            <div class="user-details" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 0;">
+            <div class="user-details" style="min-height: 160px; padding: 25px 0 10px 0;">
                 <div class="overlay"></div>
-                <div class="text-center" style="position: relative; z-index: 1;">
+                <div class="text-center">
                     <img src="{{ Auth::check() && Auth::user()->profile_pic ? S3Helper::get(Auth::user()->profile_pic) : asset('assets/images/users/avatar-1.jpg') }}"
-                        alt="" class="thumb-md img-circle">
+                        alt="" class="thumb-md img-circle" style="width: 64px; height: 64px; object-fit: cover; border: 2px solid rgba(255,255,255,0.2);">
                 </div>
-                <div class="user-info" style="margin-top: 15px; text-align: center; position: relative; z-index: 1;">
-                    <div>
-                        <a href="{{ url('profile') }}" style="color: #ffffff; font-weight: 600; text-decoration: none;">
-                            {{ Auth::check() ? Auth::user()->nama : 'Belum login' }} <br>
-                            <span class="badge badge-secondary" style="margin-top: 5px;">{{ Auth::user()->nama_role }}</span>
+                <div class="user-info" style="padding-top: 15px;">
+                    <div class="text-center">
+                        <a href="{{ url('profile') }}" style="color: #ffffff; font-weight: 600; font-size: 15px; display: block; padding-bottom: 5px;">
+                            {{ Auth::check() ? Auth::user()->nama : 'Belum login' }}
                         </a>
+                        <span class="badge badge-secondary" style="font-weight: 500;">{{ Auth::user()->nama_role }}</span>
                     </div>
                 </div>
             </div>
