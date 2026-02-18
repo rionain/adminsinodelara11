@@ -4,7 +4,7 @@
 
         <!--- Sidemenu -->
         <div id="sidebar-menu">
-            <div class="user-details">
+            <div class="user-details dropdown">
                 <div class="overlay"></div>
                 <div class="text-center">
                     <img src="{{ Auth::check() && Auth::user()->profile_pic ? S3Helper::get(Auth::user()->profile_pic) : asset('assets/images/users/avatar-1.jpg') }}"
@@ -12,7 +12,7 @@
                 </div>
                 <div class="user-info">
                     <div>
-                        <a href="#setting-dropdown" class="dropdown-toggle text-center" data-toggle="dropdown"
+                        <a href="#" class="dropdown-toggle text-center" data-toggle="dropdown"
                             aria-expanded="false">
                             {{ Auth::check() ? Auth::user()->nama : 'Belum login' }}
                             <span class="mdi mdi-menu-down"></span> <br>
@@ -20,30 +20,16 @@
                         </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="dropdown" id="setting-dropdown">
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="{{ url('profile') }}"><i class="mdi mdi-face-profile m-r-5"></i>
-                            Profile</a>
-                        {{-- @role('Superadmin')
-                        <a href="{{ url('superadmin/profile') }}"><i class="mdi mdi-face-profile m-r-5"></i>
-                            Profile</a>
-                        @endrole
-                        @role('Admin Cabang')
-                        <a href="{{ url('admin-cabang/profile') }}"><i class="mdi mdi-face-profile m-r-5"></i>
-                            Profile</a>
-                        @endrole
-                        @role('Approval')
-                        <a href="{{ url('approval/profile') }}"><i class="mdi mdi-face-profile m-r-5"></i>
-                            Profile</a>
-                        @endrole --}}
-                    </li>
-                    {{-- <li><a href="javascript:void(0)"><i class="mdi mdi-account-settings-variant m-r-5"></i> Settings</a> --}}
-                    </li>
-                    <li><a href="{{ url('logout') }}"><i class="mdi mdi-logout m-r-5"></i> Logout</a></li>
-                </ul>
+                <div class="dropdown-menu">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{ url('profile') }}"><i class="mdi mdi-face-profile m-r-5"></i>
+                                Profile</a>
+                        </li>
+                        <li><a href="{{ url('logout') }}"><i class="mdi mdi-logout m-r-5"></i> Logout</a></li>
+                    </ul>
+                </div>
             </div>
 
             <ul>
