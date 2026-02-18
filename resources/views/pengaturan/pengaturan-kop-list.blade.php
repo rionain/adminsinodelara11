@@ -242,15 +242,17 @@
                 stoploading('#lihatKop .modal-dialog')
             }).
             fail(function(data, status, error) {
-                console.log('data: ' + data)
+                console.log('data: ', data)
                 console.log('status: ' + status)
                 console.log('error: ' + error)
                 if (status == 'timeout') {
                     CekKonfirmasi('Timeout!', '')
-                } else if (data.responseJSON.status == false) {
-                    CekKonfirmasi(data.responseJSON.message, '')
+                } else if (data.responseJSON && data.responseJSON.status == false) {
+                    CekKonfirmasi(data.responseJSON.message || data.responseJSON.error, '')
+                } else {
+                    CekKonfirmasi('Terjadi kesalahan!', 'Silahkan coba lagi atau hubungi admin.')
                 }
-                stoploading('#lihatKop .modal-content')
+                stoploading('#lihatKop .modal-dialog')
             });
         }
     </script>
