@@ -786,7 +786,7 @@
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <form
-                                                        action="{{ url('http://localhost:8000/superadmin/database/database-permuridan/bab') }}"
+                                                        action="{{ url('superadmin/database/database-permuridan/bab') }}"
                                                         method="post" id="formBAB">
                                                         @csrf
                                                         <div class="modal-header">
