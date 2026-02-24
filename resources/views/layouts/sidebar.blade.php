@@ -240,6 +240,9 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="{{ url('superadmin/pengaturan/maintenance') }}" class="waves-effect">Maintenance</a>
+                            </li>
                         </ul>
                     </li>
 

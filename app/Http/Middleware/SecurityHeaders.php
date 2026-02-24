@@ -34,10 +34,10 @@ class SecurityHeaders
         $csp = "default-src 'self'; ";
         $csp .= "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://challenges.cloudflare.com; ";
         $csp .= "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; ";
-        $csp .= "img-src 'self' data: https://*.amazonaws.com; ";
+        $csp .= "img-src 'self' data: https://*.amazonaws.com https://is3.cloudhost.id; ";
         $csp .= "font-src 'self' https://fonts.gstatic.com; ";
         $csp .= "frame-src 'self' https://challenges.cloudflare.com; ";
-        $csp .= "connect-src 'self' https://challenges.cloudflare.com;";
+        $csp .= "connect-src 'self' https://challenges.cloudflare.com https://is3.cloudhost.id;";
         
         $response->headers->set('Content-Security-Policy', $csp);
 

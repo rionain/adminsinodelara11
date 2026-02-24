@@ -11,14 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+        Schema::create('user_header', function (Blueprint $table) {
+            $table->id('user_id');
+            $table->string('email', 50)->nullable();
+            $table->string('password', 255)->nullable();
+            $table->string('profile_pic', 255)->nullable();
+            $table->string('nama', 100)->nullable();
+            $table->string('gender', 15)->nullable();
+            $table->string('phone', 20)->nullable();
+            $table->string('alamat', 255)->nullable();
+            $table->bigInteger('lfk_role_id')->nullable();
+            $table->bigInteger('lfk_cabang_id')->nullable();
+            $table->bigInteger('lfk_bahan_id')->nullable();
+            $table->tinyInteger('active')->default(1);
+            $table->enum('deleted', ['1', '0'])->default('0');
+            $table->timestamp('last_login')->nullable();
+            $table->string('remember_token', 100)->nullable();
+            $table->timestamp('created_date')->useCurrent();
+            $table->dateTime('updated_date')->nullable();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
