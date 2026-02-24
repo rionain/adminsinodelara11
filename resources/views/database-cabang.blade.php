@@ -116,7 +116,7 @@
                                                 <th class="text-center">Kategori Gereja</th>
                                                 <th class="text-center">Nama Cabang</th>
                                                 <th class="text-center">Info Detail</th>
-                                                <th class="text-center">Actions</th>
+                                                <th class="text-center table-action">Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -127,7 +127,7 @@
                                                         {{ @$value->kategori_gereja->kategori_gereja }}</td>
                                                     <td class="">{{ $value->nama_cabang }}</td>
                                                     <td class="">{{ $value->info_detail }}</td>
-                                                    <td class="actions text-center">
+                                                    <td class="actions text-center table-action">
                                                         <a href="{{ url("superadmin/database/database-cabang/cabang/$value->cabang_id/sub_cabang") }}"
                                                             class="btn btn-success btn-action" title="List Sub Cabang">
                                                             <i class="fa fa-list"></i> Sub Cabang

@@ -475,6 +475,10 @@ Route::middleware(['auth'])->group(function () {
                         Route::get('/{pengaturan_surat_tugas_id}/hapus', [PengaturanSuratTugasController::class, 'hapus']);
                     });
                 });
+
+                Route::prefix('/maintenance')->group(function () {
+                    Route::get('/', [\App\Http\Controllers\Pengaturan\MaintenanceController::class, 'index']);
+                });
             });
         });
     });

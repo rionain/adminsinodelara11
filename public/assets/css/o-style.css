@@ -91,12 +91,16 @@
     }
 
     .table-action{
-        max-width: 250px;
-        width: 250px;
+        width: 320px;
+    }
+
+    .actions{
+        white-space: nowrap;
     }
 
     .btn-action{
-        margin: 3px 0px;
+        margin: 3px 2px;
+        display: inline-block;
     }
     /* .is-invalid{
         color: red !important;
