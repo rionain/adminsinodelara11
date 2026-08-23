@@ -22,3 +22,8 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Security Rules
+.env
+.env.*
+!.env.example
